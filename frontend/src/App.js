@@ -47,11 +47,28 @@ function App() {
   return (
 
       <div id = "root" className="App"  onMouseOver={(e) => handleHover(e)} onMouseOut={() => handleLeave()}>
-          
-          <USAMap  ref={mapprop} customize = {map_helper.stateConfig()}/>
           {
-            show? <div><h1>{state_string_test}</h1></div>:null
+            show? <div className = "stateName" style = {{color : color }}><h1>{state_string_test}</h1></div>:
+            <div className = "colorful-letters">
+              <h1>
+                <span>U</span>
+                <span>S</span>
+                <span>A</span>
+                &nbsp;
+
+                <span>F</span>
+                <span>U</span>
+                <span>N</span>
+                &nbsp;
+
+                <span>M</span>
+                <span>A</span>
+                <span>P</span>
+              </h1>
+            </div>
           }
+          <USAMap  ref={mapprop} customize = {map_helper.stateConfig()}/>
+         
           {
             show? <PopUp color = {color}/> : null
           }

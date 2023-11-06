@@ -6,8 +6,8 @@ import ReactDOM from 'react-dom';
 function PopUp({color}) {
     //console.log("in popup ", color);
     return (
-    <div  style={{'backgroundColor': color, 'borderRadius': 6, 'padding': 10 }} className="popup">
-        TESTING
+    <div  style={{'backgroundColor': color, 'borderRadius': 10, 'padding': 10 }} className="popup">
+        TESTING <br></br>TESTINGTEST<br></br>INGTESTINGTESTING<br></br>TESTINGTESTINGTESTING
     </div>
    );
 }

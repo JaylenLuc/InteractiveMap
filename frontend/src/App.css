@@ -11,10 +11,63 @@
 .popup{
   text-align: left;
   max-width: 30%;
-  
-  
+  box-shadow: 3px 3px #211f1f;
+  top: 105%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
 
+.colorful-letters {
+  text-align: center;
+  text-transform: uppercase;
+}
 
+.colorful-letters span:nth-child(1) {
+  color: #C6C9D0;
+}
+
+.colorful-letters span:nth-child(2) {
+  color: #E2E5CB;
+}
+
+.colorful-letters span:nth-child( 3){
+  color: #D9C2BD;
+}
+
+.colorful-letters span:nth-child( 5){
+  color: #A2C4C6;
+}
+
+.colorful-letters span:nth-child( 4) {
+  color: #ADDDCE;
+}
+
+.colorful-letters span:nth-child( 6){
+  color: #FAC898;
+}
+
+.colorful-letters span:nth-child( 7){
+  color: #C3B1E1;
+}
+
+.colorful-letters span:nth-child( 8){
+  color: #9aba95;
+}
+
+.colorful-letters span:nth-child( 9){
+  color: #fff4aa;
+}
+
+.colorful-letters {
+  /* text-transform: uppercase; */
+  text-shadow: 3px 3px #211f1f;
+}
+
+.stateName{
+
+  text-shadow: 3px 3px #211f1f;
+  text-align: center;
 }
 
 .App-logo {
