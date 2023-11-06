@@ -4,11 +4,14 @@
   height: auto;
   max-width:100%;
   position: relative;
+  padding-left: 1%;
+  flex: auto;
 }
 
 .popup{
-  text-align: right;
+  text-align: left;
   max-width: 30%;
+  
   
 
 
