@@ -35,8 +35,8 @@ function App() {
         setShow(true);
         
         color = mapprop.current.props.customize[current_elem]['fill'];
-        console.log("handlehover ",color);
-        state_string_test = current_elem;
+        //console.log("handlehover ",mapprop.current.props.customize[current_elem]['title']);
+        state_string_test = mapprop.current.props.customize[current_elem]['title'];
       }else if (obj_len == 0 ){
         setCurrent("");
         setShow(false);

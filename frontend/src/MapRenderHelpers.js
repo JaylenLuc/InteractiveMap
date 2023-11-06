@@ -19,8 +19,9 @@ class MapRenderHelper extends React.Component {
         //console.log("once inner ",once);
         //setOnce(true);
        
-            //once = true;
-        const hex_array = ["#C6AC85", "#E2E5CB", "#D9C2BD", "#A2C4C6", "#82B2B8", "#ffad75", "#6768ab","#9aba95","#fff4aa"]
+            //once = true;#C3B1E1
+
+        const hex_array = ["#C6C9D0", "#E2E5CB", "#D9C2BD", "#A2C4C6", "#ADDDCE", "#FAC898", "#C3B1E1","#9aba95","#fff4aa"]
         return {
             "CA": {
                 fill: hex_array[0],
@@ -94,7 +95,7 @@ class MapRenderHelper extends React.Component {
     },
         "GA": {
             fill: hex_array[6],
-            title: "georgia",
+            title: "Georgia",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
@@ -102,7 +103,7 @@ class MapRenderHelper extends React.Component {
 
         "HI": {
             fill: hex_array[5],
-            title: "hawaii",
+            title: "Hawaii",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
@@ -110,7 +111,7 @@ class MapRenderHelper extends React.Component {
 
         "ID": {
             fill: hex_array[4],
-            title: "Florida",
+            title: "Idaho",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
@@ -229,7 +230,7 @@ class MapRenderHelper extends React.Component {
     },
 
         "NV": {
-            fill: hex_array[1],
+            fill: hex_array[3],
             title: "Nevada",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
@@ -262,7 +263,7 @@ class MapRenderHelper extends React.Component {
 
         "NY": {
             fill: hex_array[2],
-            title: "new york",
+            title: "New York",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
@@ -270,7 +271,7 @@ class MapRenderHelper extends React.Component {
 
         "NC": {
             fill: hex_array[8],
-            title: "North carolina",
+            title: "North Carolina",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
@@ -278,7 +279,7 @@ class MapRenderHelper extends React.Component {
 
         "ND": {
             fill: hex_array[7],
-            title: "north dakota",
+            title: "North Dakota",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
@@ -304,7 +305,7 @@ class MapRenderHelper extends React.Component {
     
         "PA": {
             fill: hex_array[7],
-            title: "pennsylvania",
+            title: "Pennsylvania",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
@@ -312,8 +313,8 @@ class MapRenderHelper extends React.Component {
 
     
         "RI": {
-            fill: hex_array[7],
-            title: "rhode island",
+            fill: hex_array[6],
+            title: "Rhode Island",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
@@ -322,15 +323,15 @@ class MapRenderHelper extends React.Component {
     
         "SC": {
             fill: hex_array[5],
-            title: "south carolina",
+            title: "South Carolina",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
     },
 
         "SD": {
-            fill: hex_array[1],
-            title: "south dakota",
+            fill: hex_array[2],
+            title: "South Dakota",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
@@ -338,7 +339,7 @@ class MapRenderHelper extends React.Component {
     
         "TN": {
             fill: hex_array[4],
-            title: "tennessee",
+            title: "Tennessee",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
@@ -346,7 +347,7 @@ class MapRenderHelper extends React.Component {
 
         "TX": {
             fill: hex_array[2],
-            title: "texas",
+            title: "Texas",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
@@ -363,7 +364,7 @@ class MapRenderHelper extends React.Component {
 
         "VT": {
             fill: hex_array[1],
-            title: "Utah",
+            title: "Vermont",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
@@ -379,14 +380,14 @@ class MapRenderHelper extends React.Component {
     
         "WA": {
             fill: hex_array[6],
-            title: "washington",
+            title: "Washington",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
     },
         "WV": {
             fill: hex_array[1],
-            title: "west virginia",
+            title: "West Virginia",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
@@ -394,14 +395,14 @@ class MapRenderHelper extends React.Component {
 
             "WI": {
                 fill: hex_array[0],
-                title: "wisconsin",
+                title: "Wisconsin",
                 clickHandler: (event) => {
                     console.log(event.target.dataset);
             }
         },
         "WY": {
             fill: hex_array[8],
-            title: "wyoming",
+            title: "Wyoming",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
