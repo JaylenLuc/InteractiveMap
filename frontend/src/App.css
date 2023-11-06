@@ -1,5 +1,17 @@
 .App {
   text-align: center;
+  /* background-color: #c4e2d0; */
+  height: auto;
+  max-width:100%;
+  position: relative;
+}
+
+.popup{
+  text-align: right;
+  max-width: 30%;
+  
+
+
 }
 
 .App-logo {
