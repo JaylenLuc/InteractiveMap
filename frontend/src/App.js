@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 import React, { useState,useRef } from 'react';
 import USAMap from "react-usa-map";
 import MapRenderHelper from './MapRenderHelpers.js'
@@ -23,7 +24,7 @@ function App() {
   
   function handleHover  (e)  {
       let current_elem = e.target.dataset.name;
-      //console.log(mapprop);
+      //console.log(current_elem);
       let obj_len = Object.keys(e.target.dataset).length ;
       if (obj_len > 0 && prevState != current_elem ){
 
@@ -37,13 +38,22 @@ function App() {
         color = mapprop.current.props.customize[current_elem]['fill'];
         //console.log("handlehover ",mapprop.current.props.customize[current_elem]['title']);
         state_string_test = mapprop.current.props.customize[current_elem]['title'];
+        
+        axios.get('http://127.0.0.1:8000/getState/querystate/')
+        .then(res => {
+          console.log(res.data);
+        })
+        .catch(err => { ' oopies ' })
+
+
+
       }else if (obj_len == 0 ){
         setCurrent("");
         setShow(false);
 
       }
   };
-
+  var state_config = map_helper.stateConfig();
   return (
 
       <div id = "root" className="App"  onMouseOver={(e) => handleHover(e)} onMouseOut={() => handleLeave()}>
@@ -67,7 +77,7 @@ function App() {
               </h1>
             </div>
           }
-          <USAMap  ref={mapprop} customize = {map_helper.stateConfig()}/>
+          <USAMap  ref={mapprop} customize = {state_config}/>
          
           {
             show? <PopUp color = {color}/> : null
