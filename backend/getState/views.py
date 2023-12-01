@@ -28,8 +28,10 @@ def start_crawler(request):
         #NOT DONE EXTRACT ALL HEADERS FORM FIRST 2 ROWS--------------------------
         if i < 2:
             for entry in cells:
-                row_contents.append(entry.contents)
-                print(entry.contents)
+                #crawl abbreviation instead to match with current state being hovered
+                print() #RIGHT NOW we might want to extract all children
+                #row_contents.append(entry.contents)
+                print(entry)
             
         #----------------------------------------------------------------------------
 

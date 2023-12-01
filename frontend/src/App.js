@@ -23,7 +23,7 @@ function App() {
   };
   
   function handleHover  (e)  {
-      let current_elem = e.target.dataset.name;
+      let current_elem = e.target.dataset.name; //abbreviation
       //console.log(current_elem);
       let obj_len = Object.keys(e.target.dataset).length ;
       if (obj_len > 0 && prevState != current_elem ){
@@ -39,9 +39,10 @@ function App() {
         //console.log("handlehover ",mapprop.current.props.customize[current_elem]['title']);
         state_string_test = mapprop.current.props.customize[current_elem]['title'];
         
+        //check if state data is cached, if not then request
         axios.get('http://127.0.0.1:8000/getState/querystate/')
         .then(res => {
-          console.log(res.data);
+          console.log(res.data); 
         })
         .catch(err => { ' oopies ' })
 

@@ -81,7 +81,7 @@ class MapRenderHelper extends React.Component {
     },
         "DE": {
             fill: hex_array[8],
-            title: "Deleware",
+            title: "Delaware",
             clickHandler: (event) => {
                 console.log(event.target.dataset);
         }
