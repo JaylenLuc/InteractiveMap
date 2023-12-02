@@ -10,7 +10,7 @@ class State_Data(models.Model):
     pop =  models.CharField(max_length=30)
     total_area = models.CharField(max_length=30) #km^2
     land_area = models.CharField(max_length=30) #km^2
-    water_are = models.CharField(max_length=30) #km^2
+    water_area = models.CharField(max_length=30) #km^2
     numrep = models.CharField(max_length=30) 
 
     flag = models.SlugField(max_length=200, unique = True)
