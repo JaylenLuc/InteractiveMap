@@ -1,9 +1,13 @@
 # InteractiveMap
-Interactive Map full stack for informatics 151
+Interactive Map full stack for informatics 151. State data is web scraped from https://simple.wikipedia.org/wiki/List_of_U.S._states in the table's tbody tag. It is then parsed and put into our SQL databse with Django models where our front end sends a GET request to our request handler on start-up to receive all state data as a JSON response. onClick() prop unimplemented.
 
  [Link to npm ReactJS package](https://www.npmjs.com/package/react-usa-map)
-# Pictures
+# Pictures of beta version
+![image](https://github.com/JaylenLuc/InteractiveMap/assets/91278747/9efc6e91-d50b-4ac0-8328-92f3dfbba576)
 
+![image](https://github.com/JaylenLuc/InteractiveMap/assets/91278747/510d72d4-c3d3-4943-9304-51df66002c45)
+
+![image](https://github.com/JaylenLuc/InteractiveMap/assets/91278747/e5d55ba8-0333-4d45-928d-e8dcea3726b9)
 
 
 
