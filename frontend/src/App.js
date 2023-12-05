@@ -8,13 +8,46 @@ import PopUp from './infobox';
 
 var state_string_test = "";
 var color = "";
+var state_map = {};
+var state_content = "";
+function on_start_query() {
+
+  axios.get('http://127.0.0.1:8000/getState/querystate/')
+  .then(res => {
+    for (let i = 0; i < res.data.length; i ++){
+      let new_slug = res.data[i]["flag"].replace(/\d{2,}px/,"150px")
+      //console.log(new_slug);
+      res.data[i]["flag"] = new_slug;
+      state_map[res.data[i]["name"]]  = res.data[i]; 
+
+      //console.log("ROW DATA: ", state_map[res.data[i]["name"]]);
+
+    }
+  })
+  .catch(err => { ' oopies ' })
+
+
+}
+
+
+
 function App() {
+  const [OnStart, setOnStart] = useState(false);
+  if (OnStart == false ){
+    on_start_query();
+    setOnStart(true);
+
+  }
+  //console.log("CALIFORNIA: ",state_map["OR"]);
+  //const state_hashmap = JSON.parse(state_resp);
+  //console.log("state_hashmap: ", state_hashmap);
   const [show, setShow] = useState(false);
   const [prevState, setCurrent] = useState("");
 
   var map_helper = new MapRenderHelper();
 
   const mapprop = useRef(null);
+
 
   const handleLeave = () => {
     
@@ -36,15 +69,11 @@ function App() {
         setShow(true);
         
         color = mapprop.current.props.customize[current_elem]['fill'];
-        //console.log("handlehover ",mapprop.current.props.customize[current_elem]['title']);
-        state_string_test = mapprop.current.props.customize[current_elem]['title'];
         
-        //check if state data is cached, if not then request
-        axios.get('http://127.0.0.1:8000/getState/querystate/')
-        .then(res => {
-          console.log(res.data); 
-        })
-        .catch(err => { ' oopies ' })
+        state_string_test = mapprop.current.props.customize[current_elem]['title'];
+        if (current_elem != "DC"){
+          state_content = state_map[current_elem]
+        }
 
 
 
@@ -53,6 +82,9 @@ function App() {
         setShow(false);
 
       }
+
+      //for flag url, replace the px size with 150px
+
   };
   var state_config = map_helper.stateConfig();
   return (
@@ -81,7 +113,7 @@ function App() {
           <USAMap  ref={mapprop} customize = {state_config}/>
          
           {
-            show? <PopUp color = {color}/> : null
+            show? <PopUp  color = {color} content = {state_content}/> : null
           }
           
       </div>

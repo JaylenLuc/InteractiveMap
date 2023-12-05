@@ -1,5 +1,5 @@
 from django.db import models
-
+import uuid
 # Create your models here.
 class State_Data(models.Model):
     #data fields 
@@ -17,6 +17,21 @@ class State_Data(models.Model):
 
     def __str__(self):
         return self.name
+
+    def serialize(self):
+        #"name" = self.name
+        return {
+            "name" : self.name,
+            "capital" : self.capital,
+            "largest_city" : self.largest_city,
+            "est_date" : self.est_date,
+            "pop" :  self.pop,
+            "total_area" : self.total_area,
+            "land_area" : self.land_area,
+            "water_area" : self.water_area,
+            "numrep" : self.numrep,
+            "flag" : self.flag
+        }
 
     class Meta:
         ordering = ["name"]
