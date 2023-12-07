@@ -13,11 +13,15 @@ Interactive Map full stack for informatics 151. State data is web scraped from h
 
  # HOW TO RUN CODE ON YOUR LOCAL COMPUTER:
 
- # Getting Started with Create React App
+ # Getting Started with Create React App and Django
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+
+start Django Server by running in the django folder:
+
+### `python manage.py runserver `
 
 In the project directory, you can run:
 
